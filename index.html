@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aqui estudamos Javascript. GIF velha.gif por Dr. Donna Thomas Rodgers">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Jogo da velha</title>
+    <style>
+        *{
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .winner{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: purple;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .winner img{
+            max-width: 100px;
+        }
+        .space_board{
+            background-color:#eeeeee;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .space_board::before{
+            content: "";
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: transparent;
+            position: absolute;
+            display: none;
+        }
+        .space_board.block::before{
+            display: flex;
+        }
+        .space_board div{
+            border: 1px solid #4d4d4d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+        }
+        .space_board div img{
+            width: 100%;
+            padding: 1rem;
+        }
+        .new-game{
+           background-color: purple;
+           padding: 10px;
+           border-radius:10px;
+           margin: 10px;
+           display: none;
+        }
+        .new-game a{
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="winner">
+        <img alt="">
+        <p>VENCEDOR!</p>
+    </div>
+    <div class="space_board" id="board">
+        <div data-key="1"></div>
+        <div data-key="2"></div>
+        <div data-key="3"></div>
+        <div data-key="4"></div>
+        <div data-key="5"></div>
+        <div data-key="6"></div>
+        <div data-key="7"></div>
+        <div data-key="8"></div>
+        <div data-key="9"></div>
+    </div>
+    <p class="new-game"><a href="/">Jogar Novamente</a></p>
+    <audio class="sound-clique" src="clique.mp3"></audio>
+    <audio class="sound-success" src="success.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
