@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://raw.githubusercontent.com/jandemasmo/nlw-return-mission-origin/main/assets/images/projeto%20doctorcare%20.png" />
+   <img src="https://um-simples-jogo-da-velha.netlify.app/jogo-da-velha.gif" />
 </p>
 
 <br>
